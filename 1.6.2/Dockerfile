@@ -12,7 +12,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
 
 RUN echo "deb http://http.debian.net/debian jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list
 
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y -t jessie-backports  openjdk-8-jre-headless ca-certificates-java
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y -t jessie-backports openjdk-8-jdk ca-certificates-java
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 
 RUN useradd pinpoint-hippo -m
